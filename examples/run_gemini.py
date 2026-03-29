@@ -245,7 +245,9 @@ def main():
     print(f"\033[94mAnswer: {processed_task.result}\033[0m")
 
 # Thêm dòng này để webapp.py tìm thấy hàm
-construct_society = construct_workforce
+def construct_society(*args, **kwargs):
+    return construct_workforce()
+
 
 
 if __name__ == "__main__":
