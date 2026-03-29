@@ -1303,13 +1303,13 @@ def main():
         app = create_ui()
 
         app.queue()
-        app.launch(
+                app.launch(
+            server_name="0.0.0.0",
+            server_port=int(os.environ.get("PORT", 7860)),
             share=False,
             theme=gr.themes.Soft(primary_hue="blue"),
-            favicon_path=os.path.join(
-                os.path.dirname(__file__), "assets", "owl-favicon.ico"
-            ),
         )
+
     except Exception as e:
         logging.error(f"Error occurred while starting the application: {str(e)}")
         print(f"Error occurred while starting the application: {str(e)}")
