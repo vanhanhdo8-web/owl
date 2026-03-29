@@ -56,37 +56,37 @@ def construct_agent_list() -> List[Dict[str, Any]]:
 
     web_model = ModelFactory.create(
         model_platform=ModelPlatformType.GEMINI,
-        model_type=ModelType.GEMINI_3_PRO,
+        model_type=ModelType.GEMINI_1_5_FLASH,
         model_config_dict={"temperature": 0},
     )
 
     document_processing_model = ModelFactory.create(
         model_platform=ModelPlatformType.GEMINI,
-        model_type=ModelType.GEMINI_3_PRO,
+        model_type=ModelType.GEMINI_1_5_FLASH,
         model_config_dict={"temperature": 0},
     )
 
     reasoning_model = ModelFactory.create(
         model_platform=ModelPlatformType.GEMINI,
-        model_type=ModelType.GEMINI_3_PRO,
+        model_type=ModelType.GEMINI_1_5_FLASH,
         model_config_dict={"temperature": 0},
     )
 
     image_analysis_model = ModelFactory.create(
         model_platform=ModelPlatformType.GEMINI,
-        model_type=ModelType.GEMINI_3_PRO,
+        model_type=ModelType.GEMINI_1_5_FLASH,
         model_config_dict={"temperature": 0},
     )
 
     browsing_model = ModelFactory.create(
         model_platform=ModelPlatformType.GEMINI,
-        model_type=ModelType.GEMINI_3_PRO,
+        model_type=ModelType.GEMINI_1_5_FLASH,
         model_config_dict={"temperature": 0},
     )
 
     planning_model = ModelFactory.create(
         model_platform=ModelPlatformType.GEMINI,
-        model_type=ModelType.GEMINI_3_PRO,
+        model_type=ModelType.GEMINI_1_5_FLASH,
         model_config_dict={"temperature": 0},
     )
 
@@ -185,7 +185,7 @@ def construct_workforce() -> Workforce:
     coordinator_agent_kwargs = {
         "model": ModelFactory.create(
             model_platform=ModelPlatformType.GEMINI,
-            model_type=ModelType.GEMINI_3_PRO,
+            model_type=ModelType.GEMINI_1_5_FLASH,
             model_config_dict={"temperature": 0},
         )
     }
@@ -193,7 +193,7 @@ def construct_workforce() -> Workforce:
     task_agent_kwargs = {
         "model": ModelFactory.create(
             model_platform=ModelPlatformType.GEMINI,
-            model_type=ModelType.GEMINI_3_PRO,
+            model_type=ModelType.GEMINI_1_5_FLASH,
             model_config_dict={"temperature": 0},
         )
     }
@@ -243,6 +243,9 @@ def main():
 
     # Output the result
     print(f"\033[94mAnswer: {processed_task.result}\033[0m")
+
+# Thêm dòng này để webapp.py tìm thấy hàm
+construct_society = construct_workforce
 
 
 if __name__ == "__main__":
