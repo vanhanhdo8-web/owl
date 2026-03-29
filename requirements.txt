@@ -1,7 +1,8 @@
 camel-ai[owl]==0.2.84
-docx2markdown>=0.1.1
+onnxruntime==1.19.2
 gradio>=3.50.2
-mcp-simple-arxiv==0.2.2
-mcp-server-fetch==2025.1.17
-xmltodict>=0.14.2
-retry==0.9.2
+python-dotenv
+pandas
+xmltodict
+retry
+
